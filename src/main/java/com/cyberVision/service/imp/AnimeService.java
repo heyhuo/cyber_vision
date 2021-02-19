@@ -39,10 +39,10 @@ public class AnimeService implements AnimeBaseinfoMapper {
         return animeBaseinfoMapper.selectByPrimaryKey(id);
     }
 
-    @Override
-    public List<AnimeBaseinfo> selectAll() {
-        return animeBaseinfoMapper.selectAll();
-    }
+//    @Override
+//    public List<AnimeBaseinfo> selectAll() {
+//        return animeBaseinfoMapper.selectAll();
+//    }
 
     @Override
     public int updateByPrimaryKeySelective(AnimeBaseinfo record) {

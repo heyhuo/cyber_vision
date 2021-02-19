@@ -19,6 +19,8 @@ public class AnimeBaseinfo {
 
     private Date updateDate;
 
+    private String type;
+
     public String getId() {
         return id;
     }
@@ -81,5 +83,13 @@ public class AnimeBaseinfo {
 
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

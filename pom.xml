@@ -33,6 +33,18 @@
             <version>2.1.4</version>
         </dependency>
 
+        <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -50,6 +62,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!--string类型转化成json数组并输出-->
+        <!--        <dependency>-->
+        <!--            <groupId>net.sf.json-lib</groupId>-->
+        <!--            <artifactId>json-lib</artifactId>-->
+        <!--            <version>2.4</version>-->
+        <!--            <classifier>jdk15</classifier>-->
+        <!--        </dependency>-->
+
         <!-- dynamic-sql 用于测试MyBatis3DynamicSql生成的代码-->
         <dependency>
             <groupId>org.mybatis.dynamic-sql</groupId>
@@ -62,6 +82,14 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.6</version>
         </dependency>
+
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -84,7 +112,21 @@
 
         </plugins>
 
-
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
+
 
 </project>
