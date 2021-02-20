@@ -9,7 +9,11 @@ public class UserPostDetail {
 
     private String content;
 
+    private String picBasePath;
+
     private String picPathList;
+
+    private String thumbPath;
 
     private String tagList;
 
@@ -57,12 +61,28 @@ public class UserPostDetail {
         this.content = content;
     }
 
+    public String getPicBasePath() {
+        return picBasePath;
+    }
+
+    public void setPicBasePath(String picBasePath) {
+        this.picBasePath = picBasePath;
+    }
+
     public String getPicPathList() {
         return picPathList;
     }
 
     public void setPicPathList(String picPathList) {
         this.picPathList = picPathList;
+    }
+
+    public String getThumbPath() {
+        return thumbPath;
+    }
+
+    public void setThumbPath(String thumbPath) {
+        this.thumbPath = thumbPath;
     }
 
     public String getTagList() {

@@ -315,6 +315,76 @@ public class UserPostDetailExample {
             return (Criteria) this;
         }
 
+        public Criteria andPicBasePathIsNull() {
+            addCriterion("pic_base_path is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathIsNotNull() {
+            addCriterion("pic_base_path is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathEqualTo(String value) {
+            addCriterion("pic_base_path =", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathNotEqualTo(String value) {
+            addCriterion("pic_base_path <>", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathGreaterThan(String value) {
+            addCriterion("pic_base_path >", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathGreaterThanOrEqualTo(String value) {
+            addCriterion("pic_base_path >=", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathLessThan(String value) {
+            addCriterion("pic_base_path <", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathLessThanOrEqualTo(String value) {
+            addCriterion("pic_base_path <=", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathLike(String value) {
+            addCriterion("pic_base_path like", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathNotLike(String value) {
+            addCriterion("pic_base_path not like", value, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathIn(List<String> values) {
+            addCriterion("pic_base_path in", values, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathNotIn(List<String> values) {
+            addCriterion("pic_base_path not in", values, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathBetween(String value1, String value2) {
+            addCriterion("pic_base_path between", value1, value2, "picBasePath");
+            return (Criteria) this;
+        }
+
+        public Criteria andPicBasePathNotBetween(String value1, String value2) {
+            addCriterion("pic_base_path not between", value1, value2, "picBasePath");
+            return (Criteria) this;
+        }
+
         public Criteria andPicPathListIsNull() {
             addCriterion("pic_path_list is null");
             return (Criteria) this;
@@ -382,6 +452,76 @@ public class UserPostDetailExample {
 
         public Criteria andPicPathListNotBetween(String value1, String value2) {
             addCriterion("pic_path_list not between", value1, value2, "picPathList");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathIsNull() {
+            addCriterion("thumb_path is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathIsNotNull() {
+            addCriterion("thumb_path is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathEqualTo(String value) {
+            addCriterion("thumb_path =", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathNotEqualTo(String value) {
+            addCriterion("thumb_path <>", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathGreaterThan(String value) {
+            addCriterion("thumb_path >", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathGreaterThanOrEqualTo(String value) {
+            addCriterion("thumb_path >=", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathLessThan(String value) {
+            addCriterion("thumb_path <", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathLessThanOrEqualTo(String value) {
+            addCriterion("thumb_path <=", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathLike(String value) {
+            addCriterion("thumb_path like", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathNotLike(String value) {
+            addCriterion("thumb_path not like", value, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathIn(List<String> values) {
+            addCriterion("thumb_path in", values, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathNotIn(List<String> values) {
+            addCriterion("thumb_path not in", values, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathBetween(String value1, String value2) {
+            addCriterion("thumb_path between", value1, value2, "thumbPath");
+            return (Criteria) this;
+        }
+
+        public Criteria andThumbPathNotBetween(String value1, String value2) {
+            addCriterion("thumb_path not between", value1, value2, "thumbPath");
             return (Criteria) this;
         }
 

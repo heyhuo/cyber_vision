@@ -37,12 +37,14 @@ public class UserController {
     public Map<String, Object> postUserItem(@RequestParam("multipartFiles[]") List<MultipartFile> multipartFiles,
                                             @RequestParam("postModel") String detail) throws IOException {
 
-        UserPostDetail postModel = JSON.parseObject(detail,UserPostDetail.class);
-        System.out.println("requestParam:"+multipartFiles.size());
-        System.out.println("detail:"+detail);
+        UserPostDetail postModel = JSON.parseObject(detail, UserPostDetail.class);
+        System.out.println("requestParam:" + multipartFiles.size());
+        System.out.println("detail:" + detail);
         userPostDetailService.insert(postModel);
 
-        int idx=0;
+        String picBasePath = postModel.getPicBasePath();
+
+        int idx = 0;
 //        String baseDir = postModel
         for (MultipartFile multipartFile :
                 multipartFiles) {
@@ -51,24 +53,23 @@ public class UserController {
 //            String extention ="."+ multipartFile.getContentType().split("/")[1];
 //            UUID uuid = UUID.randomUUID();
             // 根路径，在 resources/static/upload
-            String basePath = ResourceUtils.getURL("classpath:").getPath() + "static/upload/";
+            String basePath = ResourceUtils.getURL("classpath:").getPath() + "static/";
 
-            Map<String,Object> picPathMap = JSON.parseObject(JSON.parseArray(postModel.getPicPathList()).get(idx++).toString());
+            Map<String, Object> picPathMap = JSON.parseObject(JSON.parseArray(postModel.getPicPathList()).get(idx++).toString());
 
-            String dateNowStr = Utils.getDateNow("yyyyMMdd");
+//            String dateNowStr = Utils.getDateNow("yyyyMMdd");
 
             // 创建新的文件
-            File fileExist = new File(basePath+dateNowStr);
+            String dirName = basePath + picBasePath;
+            File fileExist = new File(dirName);
             // 文件夹不存在，则新建
             if (!fileExist.exists()) {
                 fileExist.mkdirs();
             }
-            String imgPath = basePath ;
-            File outputFile = new File(imgPath+picPathMap.get("name"));
+            File outputFile = new File(dirName + "/" + picPathMap.get("name"));
             if (!outputFile.exists())
-                ImageIO.write(image,"jpg",outputFile);
+                ImageIO.write(image, "jpg", outputFile);
         }
-
 
 
         Map<String, Object> map = new HashMap<>();
@@ -77,7 +78,7 @@ public class UserController {
     }
 
     @PostMapping("/getPostItemList")
-    public Map<String, Object> getPostItemList(@RequestBody Map<String,String> params) {
+    public Map<String, Object> getPostItemList(@RequestBody Map<String, String> params) {
         List<UserPostDetail> detailList = userPostDetailService.selectByPage(params);
         Map<String, Object> map = new HashMap<>();
         map.put("code", 200);
